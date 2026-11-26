@@ -1,0 +1,28 @@
+{
+  "name": "lifeverse-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LIFEVERSE - Turn Your Real Life Into an Adventure",
+  "workspaces": [
+    "packages/*",
+    "server",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:web\"",
+    "dev:server": "npm --workspace=server run dev",
+    "dev:web": "npm --workspace=apps/web run dev",
+    "dev:mobile": "npm --workspace=apps/mobile start",
+    "build": "npm --workspace=packages/* run build --if-present && npm --workspace=server run build --if-present && npm --workspace=apps/web run build",
+    "test": "npm --workspace=server run test",
+    "seed": "npm --workspace=server run seed",
+    "lint": "npm run --workspaces --if-present lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

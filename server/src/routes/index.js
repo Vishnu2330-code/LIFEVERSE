@@ -1,0 +1,42 @@
+import { Router } from 'express';
+import authRoutes from './authRoutes.js';
+import userRoutes from './userRoutes.js';
+import questRoutes from './questRoutes.js';
+import habitRoutes from './habitRoutes.js';
+import goalRoutes from './goalRoutes.js';
+import fitnessRoutes from './fitnessRoutes.js';
+import learningRoutes from './learningRoutes.js';
+import gamificationRoutes from './gamificationRoutes.js';
+import avatarRoutes from './avatarRoutes.js';
+import worldRoutes from './worldRoutes.js';
+import marketplaceRoutes from './marketplaceRoutes.js';
+import inventoryRoutes from './inventoryRoutes.js';
+import challengeRoutes from './challengeRoutes.js';
+import friendRoutes from './friendRoutes.js';
+import communityRoutes from './communityRoutes.js';
+import notificationRoutes from './notificationRoutes.js';
+import analyticsRoutes from './analyticsRoutes.js';
+import adminRoutes from './adminRoutes.js';
+
+const router = Router();
+
+router.use('/auth', authRoutes);
+router.use('/users', userRoutes);
+router.use('/quests', questRoutes);
+router.use('/habits', habitRoutes);
+router.use('/goals', goalRoutes);
+router.use('/fitness', fitnessRoutes);
+router.use('/learning', learningRoutes);
+router.use('/gamification', gamificationRoutes);
+router.use('/avatar', avatarRoutes);
+router.use('/world', worldRoutes);
+router.use('/marketplace', marketplaceRoutes);
+router.use('/inventory', inventoryRoutes);
+router.use('/challenges', challengeRoutes);
+router.use('/friends', friendRoutes);
+router.use('/community', communityRoutes);
+router.use('/notifications', notificationRoutes);
+router.use('/analytics', analyticsRoutes);
+router.use('/admin', adminRoutes);
+
+export default router;
